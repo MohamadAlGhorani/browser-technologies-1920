@@ -1,0 +1,54 @@
+{
+  "name": "browser-technologies-1920",
+  "version": "1.0.0",
+  "description": "enquete Minor Web Development",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "prestart": "npm run build",
+    "predev": "npm run build",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "prebuild": "rimraf ./static",
+    "build": "npm-run-all build:*",
+    "build:css": "node scripts/build-css.js",
+    "build:js": "node scripts/build-js.js",
+    "build:assets": "node scripts/build-assets.js",
+    "watch": "run-p watch:*",
+    "watch:js": "chokidar 'src/js/*.js' --command 'npm run build:js'",
+    "watch:css": "chokidar 'src/css/style.css' --command 'npm run build:css'",
+    "watch:assets": "chokidar 'src/**/*.*' --command 'npm run build:assets'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamadAlGhorani/progressive-web-apps-1920.git"
+  },
+  "author": "Mohamad Al Ghorani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MohamadAlGhorani/progressive-web-apps-1920/issues"
+  },
+  "homepage": "https://github.com/MohamadAlGhorani/progressive-web-apps-1920#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "node-gyp": "^6.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
+}
