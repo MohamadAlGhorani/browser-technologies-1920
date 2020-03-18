@@ -1,6 +1,16 @@
 <%- include ./partials/head.ejs %>
 <section>
-<h2>stap Een</h2>
+<h2>Stap een</h2>
+<form action="/stappen/stap-twee" method="GET">
+	<label for=""> Naam: 
+		<input name="naam" type="text">
+	</label>
+	<label for=""> Student nummer: 
+		<input name="studentNummer" type="text">
+	</label>
+	<input  type="submit" value="Volgende">
+</form>
+
 
 </section>
 <%- include ./partials/footer.ejs %>

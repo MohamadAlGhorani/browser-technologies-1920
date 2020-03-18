@@ -1,0 +1,17 @@
+<%- include ./partials/head.ejs %>
+<section>
+<h2>Stap twee</h2>
+<form action="/stappen/stap-vier" method="GET">
+	<label for=""> beoordeling: 
+		<input name="beoordeling" type="text">
+	</label>
+	<label for="">Vak2: 
+		<input name="vak2"  type="text">
+	</label>
+	<input type="submit" value="Volgende">
+</form>
+<form action="/stappen/stap-twee">
+	<input type="submit" value="Terug">
+</form>
+</section>
+<%- include ./partials/footer.ejs %>

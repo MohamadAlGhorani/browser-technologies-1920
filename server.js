@@ -9,7 +9,7 @@ const app = express();
 
 app.get("/", function (req, res) {
   // Send a plain string using res.send();
-  res.redirect("/posts");
+  res.redirect("/stappen");
 });
 
 app
@@ -17,7 +17,7 @@ app
   .set("views", "views")
 
   .use(express.static("static"))
-  .use("/posts", appRoutes)
+  .use("/stappen", appRoutes)
 
   .listen(config.port, function () {
     console.log(`Application started on port: ${config.port}`);

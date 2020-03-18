@@ -3,12 +3,35 @@ const fetch = require("node-fetch");
 const router = express.Router();
 require("dotenv").config();
 
+
 router.get("/", function (req, res) {
     res.render("stapEen", {
         title: "home"
     });
 
 });
+
+router.get("/stap-twee", function (req, res) {
+    console.log(req.query)
+    // router.post('/', function (req, res) {
+    //     console.log(req.query)
+    // })
+    res.render("stapTwee", {
+        title: "enquete stap twee"
+    });
+
+});
+router.get("/stap-dree", function (req, res) {
+    console.log(req.query)
+    res.render("stapDree", {
+        title: "enquete stap twee"
+    });
+
+});
+
+// router.post("/stappen", function (req, res) {
+//     console.log(req.query)
+// })
 
 // router.get("/offline", function (req, res) {
 //     res.render("offline", {
