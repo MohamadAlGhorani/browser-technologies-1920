@@ -9,7 +9,7 @@ const app = express();
 
 app.get("/", function (req, res) {
   // Send a plain string using res.send();
-  res.redirect("/");
+  res.redirect("/posts");
 });
 
 app
