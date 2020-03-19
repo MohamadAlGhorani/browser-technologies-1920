@@ -6,29 +6,18 @@ const config = {
 };
 
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://mohamad:Emma.123@cluster0-1de5c.azure.mongodb.net/browserT?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifidTopology: true
+app.get("/", function (req, res) {
+  // Send a plain string using res.send();
+  res.redirect("/enquete");
 });
-client.connect(err => {
-  const collection = client.db("browserT").collection("users");
-  // perform actions on the collection object
-  app.get("/", function (req, res) {
-    // Send a plain string using res.send();
-    res.redirect("/stappen");
+
+app
+  .set("view engine", "ejs")
+  .set("views", "views")
+
+  .use(express.static("static"))
+  .use("/enquete", appRoutes)
+
+  .listen(config.port, function () {
+    console.log(`Application started on port: ${config.port}`);
   });
-
-  app
-    .set("view engine", "ejs")
-    .set("views", "views")
-
-    .use(express.static("static"))
-    .use("/stappen", appRoutes)
-
-    .listen(config.port, function () {
-      console.log(`Application started on port: ${config.port}`);
-    });
-
-});

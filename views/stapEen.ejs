@@ -1,7 +1,7 @@
 <%- include ./partials/head.ejs %>
 <section>
 <h2>Stap een</h2>
-<form action="/stappen/stap-twee" method="GET">
+<form action="/enquete/stap-twee" method="GET">
 	<label for=""> Naam: 
 		<input required name="naam" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].naam %> <%}%>">
 	</label>

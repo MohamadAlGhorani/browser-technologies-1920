@@ -6,15 +6,15 @@ const dataStapEen = []
 const dataStapTwee = []
 
 // const MongoClient = require('mongodb').MongoClient;
-// const uri = "mongodb+srv://mohamad:<password>@cluster0-1de5c.azure.mongodb.net/test?retryWrites=true&w=majority";
+// const bodyParser = require('body-parser');
+// const uri = "mongodb+srv://mohamad:<password>@cluster0-1de5c.azure.mongodb.net/browserT?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, {
-//     useNewUrlParser: true
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
 // });
 // client.connect(err => {
-//     const collection = client.db("test").collection("devices");
-//     // perform actions on the collection object
-// });
-
+//     const collection = client.db("browserT").collection("users");
+// perform actions on the collection object
 router.get("/", function (req, res) {
     res.render("stapEen", {
         title: "home",
@@ -25,7 +25,7 @@ router.get("/", function (req, res) {
 
 router.get("/stap-twee", function (req, res) {
     //console.log(req.query)
-    if (req.query.naam) {
+    if (req.query.studentNummer) {
         dataStapEen.push(req.query)
     }
     res.render("stapTwee", {
@@ -45,6 +45,9 @@ router.get("/stap-dree", function (req, res) {
     });
 
 });
+// });
+
+
 
 
 module.exports = router;

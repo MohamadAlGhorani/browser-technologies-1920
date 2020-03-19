@@ -1,7 +1,7 @@
 <%- include ./partials/head.ejs %>
 <section>
 <h2>Stap twee</h2>
-<form action="/stappen/stap-dree" method="GET">
+<form action="/enquete/stap-dree" method="GET">
 	<label for=""> Docent: 
 		<input name="docent" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].docent %> <%}%>">
 	</label>
@@ -10,6 +10,6 @@
 	</label>
 	<input type="submit" value="Volgende">
 </form>
-<a href="/stappen">terug</a>
+<a href="/enquete">terug</a>
 </section>
 <%- include ./partials/footer.ejs %>
