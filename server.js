@@ -7,12 +7,13 @@ const config = {
 
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://mohamad:<password>@cluster0-1de5c.azure.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://mohamad:Emma.123@cluster0-1de5c.azure.mongodb.net/browserT?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifidTopology: true
 });
 client.connect(err => {
-  const collection = client.db("test").collection("devices");
+  const collection = client.db("browserT").collection("users");
   // perform actions on the collection object
   app.get("/", function (req, res) {
     // Send a plain string using res.send();
