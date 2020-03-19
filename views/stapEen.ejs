@@ -3,11 +3,12 @@
 <h2>Stap een</h2>
 <form action="/stappen/stap-twee" method="GET">
 	<label for=""> Naam: 
-		<input name="naam" type="text">
+		<input required name="naam" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].naam %> <%}%>">
 	</label>
 	<label for=""> Student nummer: 
-		<input name="studentNummer" type="text">
+		<input required name="studentNummer" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].studentNummer %> <%}%>">
 	</label>
+		
 	<input  type="submit" value="Volgende">
 </form>
 

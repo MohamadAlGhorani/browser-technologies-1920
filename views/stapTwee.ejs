@@ -3,15 +3,13 @@
 <h2>Stap twee</h2>
 <form action="/stappen/stap-dree" method="GET">
 	<label for=""> Docent: 
-		<input name="docent" type="text">
+		<input name="docent" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].docent %> <%}%>">
 	</label>
 	<label for="">Vak: 
-		<input name="vak" type="text">
+		<input name="vak" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].vak %> <%}%>">
 	</label>
 	<input type="submit" value="Volgende">
 </form>
-<form action="/stappen" >
-	<input type="submit" value="Terug">
-</form>
+<a href="/stappen">terug</a>
 </section>
 <%- include ./partials/footer.ejs %>

@@ -1,6 +1,6 @@
 <%- include ./partials/head.ejs %>
 <section>
-<h2>Stap twee</h2>
+<h2>Stap Dree</h2>
 <form action="/stappen/stap-vier" method="GET">
 	<label for=""> beoordeling: 
 		<input name="beoordeling" type="text">
@@ -10,8 +10,6 @@
 	</label>
 	<input type="submit" value="Volgende">
 </form>
-<form action="/stappen/stap-twee">
-	<input type="submit" value="Terug">
-</form>
+<a href="/stappen/stap-twee">terug</a>
 </section>
 <%- include ./partials/footer.ejs %>
