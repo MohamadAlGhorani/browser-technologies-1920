@@ -7,24 +7,24 @@
     </label>
     <fieldset>
         <label for="goed"> Wat vond je goed gegaan bij deze minor:</label> 
-        <textarea id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>">
+        <textarea id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>">
             <% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>
         </textarea>
     </fieldset>
     <fieldset>
         <label for="slecht"> Wat vond je minder goed aan deze minor:</label>
-        <textarea id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>">
+        <textarea id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>">
             <% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>
         </textarea>
     </fieldset>
     <fieldset>
         <label for=""> welke vak vind je het leukst: 
-            <input name="leukst" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].leukst %> <%}%>">
+            <input name="leukst" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].leukst %><%}%>">
         </label>
     </fieldset>
     <fieldset>
         <label for=""> Wat voor score geef je deze minor: 
-            <input name="beoordeling" type="text" inputmode="numeric" pattern="[0-9]{9}*" autocomplete="one-time-code" minlength="1" maxlength="2" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].beoordeling %> <%}%>">
+            <input name="beoordeling" type="text" inputmode="numeric" pattern="[0-9]{9}*" autocomplete="one-time-code" minlength="1" maxlength="2" value="<% if(data[data.length-1]) {%><%= data[data.length-1].beoordeling %><%}%>">
         </label>
     </fieldset>
     <input type="submit" value="Opslaan">
