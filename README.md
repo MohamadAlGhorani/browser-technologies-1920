@@ -2,7 +2,7 @@
 [Online demo](https://enquete-web-dev.herokuapp.com/)
 
 ## [opdracht 1.1](https://github.com/MohamadAlGhorani/browser-technologies-1920/wiki/Opdracht-1.1-Breek-het-web)
-## [opdracht 1.2]()
+## [opdracht 1.2](https://github.com/MohamadAlGhorani/browser-technologies-1920/wiki/Opdracht-1.2---Fork-je-OBA)
 
 ## Case -1-
 
