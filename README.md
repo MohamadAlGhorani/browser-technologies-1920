@@ -1,6 +1,9 @@
 # browser-technologies-1920
 [Online demo](https://enquete-web-dev.herokuapp.com/)
 
+## [opdracht 1.1]()
+## [opdracht 1.2]()
+
 ## Case -1-
 
 Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
