@@ -2,52 +2,42 @@ const express = require("express");
 const fetch = require("node-fetch");
 const router = express.Router();
 require("dotenv").config();
-const dataStapEen = []
-const dataStapTwee = []
+const dataStapEen = [];
+const dataStapTwee = [];
+console.log(dataStapTwee);
+const fs = require("fs");
 
-// const MongoClient = require('mongodb').MongoClient;
-// const bodyParser = require('body-parser');
-// const uri = "mongodb+srv://mohamad:<password>@cluster0-1de5c.azure.mongodb.net/browserT?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// });
-// client.connect(err => {
-//     const collection = client.db("browserT").collection("users");
-// perform actions on the collection object
-router.get("/", function (req, res) {
-    res.render("stapEen", {
-        title: "home",
-        data: dataStapEen,
-    });
-
+router.get("/", function(req, res) {
+  res.render("stapEen", {
+    title: "home",
+    data: dataStapEen
+  });
 });
 
-router.get("/stap-twee", function (req, res) {
-    //console.log(req.query)
-    if (req.query.studentNummer) {
-        dataStapEen.push(req.query)
-    }
-    res.render("stapTwee", {
-        title: "enquete stap twee",
-        data: dataStapTwee,
-    });
+router.get("/stap-twee", function(req, res) {
+  console.log(req.query);
+  if (req.query.studentNummer) {
+    dataStapEen.push(req.query);
+  } else {
+    dataStapTwee.push(req.query);
+  }
+  console.log("user", dataStapEen);
+  console.log("info", dataStapTwee);
+  let infoData = dataStapTwee.filter(student => {
+    return student.user == req.query.studentNummer;
+  });
+  console.log("daataaa", infoData);
+  res.render("stapTwee", {
+    title: "enquete stap twee",
+    data: infoData,
+    user: req.query.studentNummer
+  });
 });
 
-router.get("/stap-dree", function (req, res) {
-    //console.log(req.query)
-    if (req.query.docent) {
-        dataStapTwee.push(req.query)
-    }
-    console.log(dataStapEen)
-    res.render("stapDree", {
-        title: "enquete stap twee"
-    });
-
+router.get("/stap-dree", function(req, res) {
+  res.render("stapDree", {
+    title: "enquete stap twee"
+  });
 });
-// });
-
-
-
 
 module.exports = router;

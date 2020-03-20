@@ -1,15 +1,23 @@
 <%- include ./partials/head.ejs %>
 <section>
 <h2>Stap twee</h2>
-<form action="/enquete/stap-dree" method="GET">
+<form action="/enquete/stap-twee" method="GET">
+    <label >
+    <input type="hidden" name="user" value="<%= user%>">
+    </label>
 	<label for=""> Docent: 
 		<input name="docent" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].docent %> <%}%>">
 	</label>
 	<label for="">Vak: 
 		<input name="vak" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].vak %> <%}%>">
+    </label>
+    <label for=""> Beoordeling: 
+		<input name="beoordeling" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].beoordeling %> <%}%>">
 	</label>
-	<input type="submit" value="Volgende">
+    <input type="submit" value="Opslaan">
 </form>
-<a href="/enquete">terug</a>
+<form action="/enquete/stap-dree">
+    <input type="submit" value="Versturen">
+</form>
 </section>
 <%- include ./partials/footer.ejs %>

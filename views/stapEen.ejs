@@ -2,14 +2,10 @@
 <section>
 <h2>Stap een</h2>
 <form action="/enquete/stap-twee" method="GET">
-	<label for=""> Naam: 
-		<input required name="naam" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].naam %> <%}%>">
-	</label>
 	<label for=""> Student nummer: 
-		<input required name="studentNummer" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].studentNummer %> <%}%>">
+		<input required name="studentNummer" type="text" value="">
 	</label>
-		
-	<input  type="submit" value="Volgende">
+	<input  type="submit" value="Login">
 </form>
 
 
