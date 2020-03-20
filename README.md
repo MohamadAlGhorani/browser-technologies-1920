@@ -18,7 +18,7 @@ Ik wil een enquete kunnen invullen over de minor Web Development, met verschille
 ## 3 punten waar ik feedback op wil
 
 - Graag wil ik feedback op mijn inputs in de bestand stapTwee.ejs ik wil weten of deze inputs genoeg zijn.
-- ik wil graag feedback op mijn ux
+- ik wil graag feedback op mijn ux en de semantisch html
 - ik wil graag feedback op het readme en wat ik er in moet schrijven.
 
 ## functional/reliable
