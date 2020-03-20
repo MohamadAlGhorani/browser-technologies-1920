@@ -5,7 +5,6 @@ require("dotenv").config();
 const dataStapEen = [];
 const dataStapTwee = [];
 console.log(dataStapTwee);
-const fs = require("fs");
 
 router.get("/", function(req, res) {
   res.render("stapEen", {
