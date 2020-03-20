@@ -6,37 +6,46 @@ const dataStapEen = [];
 const dataStapTwee = [];
 console.log(dataStapTwee);
 
-router.get("/", function(req, res) {
-  res.render("stapEen", {
-    title: "home",
-    data: dataStapEen
-  });
+router.get("/", function (req, res) {
+    res.render("stapEen", {
+        title: "Inloggen",
+    });
 });
 
-router.get("/stap-twee", function(req, res) {
-  console.log(req.query);
-  if (req.query.studentNummer) {
-    dataStapEen.push(req.query);
-  } else {
-    dataStapTwee.push(req.query);
-  }
-  console.log("user", dataStapEen);
-  console.log("info", dataStapTwee);
-  let infoData = dataStapTwee.filter(student => {
-    return student.user == req.query.studentNummer;
-  });
-  console.log("daataaa", infoData);
-  res.render("stapTwee", {
-    title: "enquete stap twee",
-    data: infoData,
-    user: req.query.studentNummer
-  });
+router.get("/stap-twee", function (req, res) {
+    console.log(req.query);
+    if (req.query.studentNummer) {
+        dataStapEen.push(req.query);
+    } else {
+        dataStapTwee.push(req.query);
+    }
+    if (req.query.user || req.query.studentNummer) {
+        console.log("user", dataStapEen);
+        console.log("info", dataStapTwee);
+        let infoData = dataStapTwee.filter(student => {
+            if (req.query.studentNummer) {
+                return student.user == req.query.studentNummer;
+            } else {
+                return student.user == req.query.user;
+            }
+        });
+        console.log("daataaa", infoData);
+        res.render("stapTwee", {
+            title: "enquete invullen",
+            data: infoData,
+            user: req.query.studentNummer
+        });
+    } else {
+        res.render("stapEen", {
+            title: "Inloggen",
+        });
+    }
 });
 
-router.get("/stap-dree", function(req, res) {
-  res.render("stapDree", {
-    title: "enquete stap twee"
-  });
+router.get("/stap-dree", function (req, res) {
+    res.render("stapDree", {
+        title: "Thanx"
+    });
 });
 
 module.exports = router;
