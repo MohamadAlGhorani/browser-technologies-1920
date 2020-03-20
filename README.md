@@ -1,4 +1,8 @@
 # browser-technologies-1920
+[Online demo](https://enquete-web-dev.herokuapp.com/)
+
+## [opdracht 1.1](https://github.com/MohamadAlGhorani/browser-technologies-1920/wiki/Opdracht-1.1-Breek-het-web)
+## [opdracht 1.2](https://github.com/MohamadAlGhorani/browser-technologies-1920/wiki/Opdracht-1.2---Fork-je-OBA)
 
 ## Case -1-
 
@@ -14,7 +18,7 @@ Ik wil een enquete kunnen invullen over de minor Web Development, met verschille
 ## 3 punten waar ik feedback op wil
 
 - Graag wil ik feedback op mijn inputs in de bestand stapTwee.ejs ik wil weten of deze inputs genoeg zijn.
-- ik wil graag feedback op mijn ux
+- ik wil graag feedback op mijn ux en de semantisch html
 - ik wil graag feedback op het readme en wat ik er in moet schrijven.
 
 ## functional/reliable
