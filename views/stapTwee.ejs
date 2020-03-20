@@ -1,19 +1,32 @@
 <%- include ./partials/head.ejs %>
 <section>
-<h2>Stap twee</h2>
+<h2>Het enquete</h2>
 <form action="/enquete/stap-twee" method="GET">
     <label >
     <input type="hidden" name="user" value="<%= user%>">
     </label>
-	<label for=""> Docent: 
-		<input name="docent" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].docent %> <%}%>">
-	</label>
-	<label for="">Vak: 
-		<input name="vak" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].vak %> <%}%>">
-    </label>
-    <label for=""> Beoordeling: 
-		<input name="beoordeling" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].beoordeling %> <%}%>">
-	</label>
+    <fieldset>
+        <label for="goed"> Wat vond je goed gegaan bij deze minor:</label> 
+        <textarea id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>">
+            <% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>
+        </textarea>
+    </fieldset>
+    <fieldset>
+        <label for="slecht"> Wat vond je minder goed aan deze minor:</label>
+        <textarea id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>">
+            <% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>
+        </textarea>
+    </fieldset>
+    <fieldset>
+        <label for=""> welke vak vind je het leukst: 
+            <input name="leukst" type="text" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].leukst %> <%}%>">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for=""> Wat voor score geef je deze minor: 
+            <input name="beoordeling" type="text" inputmode="numeric" pattern="[0-9]{9}*" autocomplete="one-time-code" minlength="1" maxlength="2" value="<% if(data[data.length-1]) {%> <%= data[data.length-1].beoordeling %> <%}%>">
+        </label>
+    </fieldset>
     <input type="submit" value="Opslaan">
 </form>
 <form action="/enquete/stap-dree">
