@@ -4,7 +4,6 @@ const router = express.Router();
 require("dotenv").config();
 const dataStapEen = [];
 const dataStapTwee = [];
-console.log(dataStapTwee);
 
 router.get("/", function (req, res) {
     res.render("stapEen", {
