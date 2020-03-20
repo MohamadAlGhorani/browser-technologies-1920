@@ -6,7 +6,7 @@
     <input type="hidden" name="user" value="<%= user%>">
     </label>
     <fieldset>
-        <label for="goed"> Wat vond je goed gegaan bij deze minor:</label> 
+        <label for="goed"> 1- Wat vond je goed gegaan bij deze minor:</label> 
         <p>
             <textarea rows="4" cols="50" id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>">
                 <% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>
@@ -14,7 +14,7 @@
         </p>
     </fieldset>
     <fieldset>
-        <label for="slecht"> Wat vond je minder goed aan deze minor:</label>
+        <label for="slecht"> 2- Wat vond je minder goed aan deze minor:</label>
         <p>
             <textarea rows="4" cols="50" id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>">
                 <% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>
@@ -22,17 +22,17 @@
         </p>
     </fieldset>
     <fieldset>
-        <label for=""> welke vak vind je het leukst: 
+        <label for=""> 3- welke vak vind je het leukst: 
             <input name="leukst" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].leukst %><%}%>">
         </label>
     </fieldset>
     <fieldset>
-        <label for=""> Wat voor score geef je deze minor: 
+        <label for=""> 4- Wat voor score geef je deze minor: 
             <input name="beoordeling" type="number" min="1" max="10" value="<% if(data[data.length-1]) {%><%= data[data.length-1].beoordeling %><%}%>">
         </label>
     </fieldset>
     <fieldset>
-        <label>Heb je voldoende hulp gekregen: 
+        <label> 5- Heb je voldoende hulp gekregen: 
             <% if(data[data.length-1]) { if(data[data.length-1].hulp == "ja") {%>
             <label> ja
                 <input name="hulp" type="radio" checked="checked" value="ja">

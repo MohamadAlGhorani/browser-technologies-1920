@@ -1,7 +1,7 @@
 <%- include ./partials/head.ejs %>
 <section>
 <h2>Inloggen met je student nummer</h2>
-<p>Log in om het enquete in te vullen. Als je het enquete niet afkrijgt, sla je enquete dan op kun om je enquete later af te krijgen</p>
+<p>Log in om het enquete in te vullen. Als je het enquete niet afkrijgt, sla je enquete dan op om je enquete later af te krijgen</p>
 <form action="/enquete/stap-twee" method="GET">
 	<label for=""> Student nummer: 
 		<input required="required" name="studentNummer" type="text" inputmode="numeric" pattern="[0-9]{9}*" autocomplete="one-time-code" minlength="9" maxlength="9" value="">
