@@ -42,12 +42,12 @@ router.get("/stap-twee", function(req, res) {
   } else {
     dataStapTwee.push(req.query);
   }
-  //check if ther is user number on the page of the form and a student number from the log in page
+  //check if there is user number on the page of the form and a student number from the log in page
   if (req.query.user || req.query.studentNummer) {
     console.log("user", dataStapEen);
     console.log("info", dataStapTwee);
-  //check of their is a mutch between the student number from the log in and the user number form the data of the form that 
-  //have been saved before to give back the data of that specifick user
+  //check of there is a match between the student number from the log in and the user number form the data of the form that 
+  //have been saved before to give back the data of that specific user.
     let infoData = dataStapTwee.filter(student => {
       if (req.query.studentNummer) {
         return student.user == req.query.studentNummer;
@@ -62,7 +62,7 @@ router.get("/stap-twee", function(req, res) {
       data: infoData,
       user: req.query.studentNummer
     }); 
-    //if their is no student number or user number then stay on the page log in. i dont wanna anybody go to 
+    //if there is no student number or user number then stay on the page log in. i dont wanna anybody go to 
     //https://enquete-web-dev.herokuapp.com/enquete/stap-twee.  with out writing down his student number.
   } else {
     res.render("stapEen", {
