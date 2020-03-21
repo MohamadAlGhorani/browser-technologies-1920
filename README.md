@@ -84,4 +84,4 @@ router.get("/stap-twee", function(req, res) {
 - run ``` npm run dev ``` to open the porject in your brwoser using localhost:4000/
 
 ## License
-Licens is [MIT]()
+Licens is [MIT](https://github.com/MohamadAlGhorani/browser-technologies-1920/blob/master/LICENSE)
