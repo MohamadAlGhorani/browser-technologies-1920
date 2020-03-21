@@ -81,7 +81,7 @@ router.get("/stap-twee", function(req, res) {
 - Clone this repository.
 - Navigate to the folder of the repository using your terminal.
 - Write in your terminal ```npm install``` to download the node modules.
-- Run ``` npm run dev ``` to open the porject in your brwoser using localhost:4000/
+- Run ``` npm run dev ``` in your terminal to open the porject in your brwoser using localhost:4000/
 
 ## License
 License is [MIT](https://github.com/MohamadAlGhorani/browser-technologies-1920/blob/master/LICENSE)
