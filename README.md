@@ -35,7 +35,8 @@ Daarna door het get methode op de server kan ik het data van het formulier krijg
 ```js
 router.get("/stap-twee", function(req, res) {
   console.log(req.query);
-  // check if the requist has a student number if yes add this number to the array dataStapEen(the login page) if no add the     //data to the other array dataStapTwee(the data from the form on the form page) 
+  // check if the requist has a student number if yes add this number to the array dataStapEen(the login page) if no add the 
+  // data to the other array dataStapTwee(the data from the form on the form page) 
   if (req.query.studentNummer) {
     dataStapEen.push(req.query);
   } else {
@@ -45,7 +46,8 @@ router.get("/stap-twee", function(req, res) {
   if (req.query.user || req.query.studentNummer) {
     console.log("user", dataStapEen);
     console.log("info", dataStapTwee);
-  //check of their is a mutch between the student number from the log in and the user number  form the data of the form that     //have been saved before to give back the data of that specifick user
+  //check of their is a mutch between the student number from the log in and the user number form the data of the form that 
+  //have been saved before to give back the data of that specifick user
     let infoData = dataStapTwee.filter(student => {
       if (req.query.studentNummer) {
         return student.user == req.query.studentNummer;
@@ -60,7 +62,8 @@ router.get("/stap-twee", function(req, res) {
       data: infoData,
       user: req.query.studentNummer
     }); 
-    //if their is no student number or user number then stay on the page log in. i dont wanna anybody go to https://enquete-web-dev.herokuapp.com/enquete/stap-twee.  with out writing down his student number.
+    //if their is no student number or user number then stay on the page log in. i dont wanna anybody go to 
+    //https://enquete-web-dev.herokuapp.com/enquete/stap-twee.  with out writing down his student number.
   } else {
     res.render("stapEen", {
       title: "Inloggen"
