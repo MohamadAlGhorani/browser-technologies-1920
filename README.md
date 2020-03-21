@@ -65,6 +65,11 @@ router.get("/stap-twee", function(req, res) {
   }
 });
 ```
+<img width="1280" alt="Screenshot 2020-03-21 at 20 21 18" src="https://user-images.githubusercontent.com/45425087/77234837-ac296980-6bb1-11ea-842e-01e5aa7afb35.png">
+
+<img width="1280" alt="Screenshot 2020-03-21 at 20 21 33" src="https://user-images.githubusercontent.com/45425087/77234836-a764b580-6bb1-11ea-9896-f0a1e7f6b0f1.png">
+
+<img width="1280" alt="Screenshot 2020-03-21 at 20 21 51" src="https://user-images.githubusercontent.com/45425087/77234838-adf32d00-6bb1-11ea-89fd-6eb953cfe9ba.png">
 
 
 ## usable
