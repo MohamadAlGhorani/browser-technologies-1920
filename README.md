@@ -16,7 +16,7 @@ Ik wil een enquete kunnen invullen over de minor Web Development, met verschille
 - Mijn core functionlieteit is als de gebruiker het enquete niet afkrijgt, kan de gebruiker later terugkomen en weer verder gaan met waar hij/zij gebelven is.
 - Goed symantische HTML.
 
-## functional/reliable
+## Functional/Reliable
 Voor het functioneel laagje heb ik ervoor gezorgd dat iedereen in elke situatie op elke device via elke browser het core functionlieteit krijgt. Iedereen kan het enquete invullen en iedreen kan het enquete opslaan om het later terug af te krijgen. Omdat het alleen HTMl is en door het server side rendering is het mogelijk om data op de server op te slaan van elke user die het uniqe id heeft namelijk het student nummer. door het mogelijkheid van inlog functionlieteit krijgt elke gebruiker zijn eigen data te zien.
 
 Het oplossing met code die ik bedacht heb voor deze probleem is de volgende:
@@ -72,6 +72,16 @@ router.get("/stap-twee", function(req, res) {
 <img width="1280" alt="Screenshot 2020-03-21 at 20 21 51" src="https://user-images.githubusercontent.com/45425087/77234838-adf32d00-6bb1-11ea-89fd-6eb953cfe9ba.png">
 
 
-## usable
+## Usable
 
-## pleasurable
+## Pleasurable
+
+## Installation
+- Download [Node.js](https://nodejs.org/en/) if u done have it. 
+- Clone this reposotory.
+- Navigate to the folder of the reposotory using your terminal
+- Write in your terminal ```npm install``` to download the node modules.
+- run ``` npm run dev ``` to open the porject in your brwoser using localhost:4000/
+
+## License
+Licens is [MIT]()
