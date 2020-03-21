@@ -16,12 +16,6 @@ Ik wil een enquete kunnen invullen over de minor Web Development, met verschille
 - Mijn core functionlieteit is als de gebruiker het enquete niet afkrijgt, kan de gebruiker later terugkomen en weer verder gaan met waar hij/zij gebelven is.
 - Goed symantische HTML.
 
-## 3 punten waar ik feedback op wil
-
-- Graag wil ik feedback op mijn inputs in de bestand stapTwee.ejs ik wil weten of deze inputs genoeg zijn.
-- ik wil graag feedback op mijn ux en de semantisch html
-- ik wil graag feedback op het readme en wat ik er in moet schrijven.
-
 ## functional/reliable
 Voor het functioneel laagje heb ik ervoor gezorgd dat iedereen in elke situatie op elke device via elke browser het core functionlieteit krijgt. Iedereen kan het enquete invullen en iedreen kan het enquete opslaan om het later terug af te krijgen. Omdat het alleen HTMl is en door het server side rendering is het mogelijk om data op de server op te slaan van elke user die het uniqe id heeft namelijk het student nummer. door het mogelijkheid van inlog functionlieteit krijgt elke gebruiker zijn eigen data te zien.
 
