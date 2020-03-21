@@ -77,7 +77,7 @@ router.get("/stap-twee", function(req, res) {
 ## Pleasurable
 
 ## Installation
-- Download [Node.js](https://nodejs.org/en/) if u done have it. 
+- Download [Node.js](https://nodejs.org/en/) if you don't have it. 
 - Clone this reposotory.
 - Navigate to the folder of the reposotory using your terminal
 - Write in your terminal ```npm install``` to download the node modules.
