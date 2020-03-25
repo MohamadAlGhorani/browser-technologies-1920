@@ -73,6 +73,19 @@ router.get("/stap-twee", function(req, res) {
 
 ## Usable
 
+IE11 ondersteund linar-gradiant niet om het probleem op te lossen heb ik @supports toegevoegd
+```
+section {
+    background: #00b2f1 no-repeat;
+}
+
+@supports (background: linear-gradient(#01cd82, #00b2f1)) {
+    section {
+        background: linear-gradient(#00b2f1, #01cd82) no-repeat;
+    }
+}
+```
+
 ## Pleasurable
 
 ## Installation
