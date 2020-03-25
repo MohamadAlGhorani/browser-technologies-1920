@@ -69,7 +69,7 @@ router.get("/stap-twee", function(req, res) {
 
 <img width="1280" alt="Screenshot 2020-03-25 at 15 27 00" src="https://user-images.githubusercontent.com/45425087/77547239-36711680-6ead-11ea-866d-8b312b39509a.png">
 
-<img width="1280" alt="Screenshot 2020-03-25 at 11 22 13" src="https://user-images.githubusercontent.com/45425087/77547249-3a049d80-6ead-11ea-8e25-14ee705c2872.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 27 10" src="https://user-images.githubusercontent.com/45425087/77547381-68827880-6ead-11ea-9662-905d813ae08a.png">
 
 
 ## Usable
