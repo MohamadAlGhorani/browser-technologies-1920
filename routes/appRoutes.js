@@ -5,13 +5,13 @@ require("dotenv").config();
 const dataStapEen = [];
 const dataStapTwee = [];
 
-router.get("/", function(req, res) {
+router.get("/", function (req, res) {
   res.render("stapEen", {
     title: "Inloggen"
   });
 });
 
-router.get("/stap-twee", function(req, res) {
+router.get("/stap-twee", function (req, res) {
   console.log(req.query);
   if (req.query.studentNummer) {
     dataStapEen.push(req.query);
@@ -30,7 +30,7 @@ router.get("/stap-twee", function(req, res) {
     });
     console.log("daataaa", infoData);
     res.render("stapTwee", {
-      title: "enquete invullen",
+      title: "Enquete invullen",
       data: infoData,
       user: req.query.studentNummer
     });
@@ -41,9 +41,9 @@ router.get("/stap-twee", function(req, res) {
   }
 });
 
-router.get("/stap-dree", function(req, res) {
+router.get("/stap-dree", function (req, res) {
   res.render("stapDree", {
-    title: "Thanx"
+    title: "Bedankt"
   });
 });
 
