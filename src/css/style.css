@@ -148,6 +148,27 @@ fieldset {
 .form-stap-twee input[type="number"] {
     display: block;
     margin-top: .5em;
+    width: 6em;
+    height: 4em;
+    padding-left: 2em;
+    position: relative;
+}
+
+.form-stap-twee input[type="number"]::-webkit-outer-spin-button,
+.form-stap-twee input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+    margin: 0;
+}
+
+.form-stap-twee input[type=number]::-webkit-outer-spin-button,
+.form-stap-twee input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 2em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
 }
 
 
