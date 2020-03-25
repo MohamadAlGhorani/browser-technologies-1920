@@ -74,6 +74,13 @@ router.get("/stap-twee", function(req, res) {
 
 ## Usable
 
+Het usable laagje is het laagje waar het web-site opgemaakt wordt, kleurtjes en layout krijgt. Zodat het web-site bereikbaar wordt Daarnaast zorgt deze laagje op gebruik vreindelijkheid.
+<img width="1280" alt="Screenshot 2020-03-25 at 15 30 12" src="https://user-images.githubusercontent.com/45425087/77547616-b7c8a900-6ead-11ea-8de6-f9c8c3b22652.png">
+<img width="617" alt="Screenshot 2020-03-25 at 15 31 14" src="https://user-images.githubusercontent.com/45425087/77547627-bbf4c680-6ead-11ea-9e54-689fcb5292b8.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 31 23" src="https://user-images.githubusercontent.com/45425087/77547631-bdbe8a00-6ead-11ea-8b30-bae9c9a70636.png">
+
+### Feature detection
+
 IE11 ondersteund linar-gradiant niet om het probleem op te lossen heb ik @supports toegevoegd
 ```
 section {
