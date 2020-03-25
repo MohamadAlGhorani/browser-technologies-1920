@@ -1,73 +1,75 @@
 <%- include ./partials/head.ejs %>
 <section>
 <h2>Het enquete</h2>
-<form action="/enquete/stap-twee" method="GET">
+<form class="form-stap-twee" action="/enquete/stap-twee" method="GET">
     <label >
     <input type="hidden" name="user" value="<%= user%>">
     </label>
     <fieldset>
-        <label for="goed"> 1- Wat vond je goed gegaan bij deze minor:</label> 
-        <p>
-            <textarea rows="4" cols="50" id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>">
+        <legend>Vraag 1</legend>
+        <label for="goed">Wat vond je goed gegaan bij deze minor?</label> 
+            <textarea rows="4" cols="35" id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>">
                 <% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>
             </textarea>
-        </p>
     </fieldset>
     <fieldset>
-        <label for="slecht"> 2- Wat vond je minder goed aan deze minor:</label>
-        <p>
-            <textarea rows="4" cols="50" id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>">
+        <legend>Vraag 2</legend>
+        <label for="slecht">Wat vond je minder goed aan deze minor?</label>
+            <textarea rows="4" cols="35" id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>">
                 <% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>
             </textarea>
-        </p>
     </fieldset>
     <fieldset>
-        <label for=""> 3- welke vak vind je het leukst: 
+        <legend>Vraag 3</legend>
+        <label for="">Welke vak vind je het leukst? 
             <input name="leukst" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].leukst %><%}%>">
         </label>
     </fieldset>
     <fieldset>
-        <label for=""> 4- Wat voor score geef je deze minor: 
+        <legend>Vraag 4</legend>
+        <label for="">Wat voor score geef je deze minor? 
             <input name="beoordeling" type="number" min="1" max="10" value="<% if(data[data.length-1]) {%><%= data[data.length-1].beoordeling %><%}%>">
         </label>
     </fieldset>
     <fieldset>
-        <label> 5- Heb je voldoende hulp gekregen: 
-            <% if(data[data.length-1]) { if(data[data.length-1].hulp == "ja") {%>
-            <label> ja
-                <input name="hulp" type="radio" checked="checked" value="ja">
-            </label>
-            <label> nee
-                <input name="hulp" type="radio" value="nee">
-            </label>
-            <% } else if(data[data.length-1]) if(data[data.length-1].hulp == "nee") {%>
+        <legend>Vraag 5</legend>
+        <label>Heb je voldoende hulp gekregen?</label>
+            <div class="q-container">
+                <% if(data[data.length-1]) { if(data[data.length-1].hulp == "ja") {%>
                 <label> ja
-                    <input name="hulp" type="radio" value="ja">
-                </label>
-                <label> nee
-                    <input name="hulp" type="radio" checked="checked" value="nee">
-                </label>
-            <% } else {%>
-                <label> ja
-                    <input name="hulp" type="radio" value="ja">
-                </label>
-                <label> nee
-                    <input name="hulp" type="radio"  value="nee">
-                </label>
-            <%}}else {%>
-                <label> ja
-                    <input name="hulp" type="radio" value="ja">
+                    <input name="hulp" type="radio" checked="checked" value="ja">
                 </label>
                 <label> nee
                     <input name="hulp" type="radio" value="nee">
                 </label>
-            <%}%>
-        </label>
+                <% } else if(data[data.length-1]) if(data[data.length-1].hulp == "nee") {%>
+                    <label> ja
+                        <input name="hulp" type="radio" value="ja">
+                    </label>
+                    <label> nee
+                        <input name="hulp" type="radio" checked="checked" value="nee">
+                    </label>
+                <% } else {%>
+                    <label> ja
+                        <input name="hulp" type="radio" value="ja">
+                    </label>
+                    <label> nee
+                        <input name="hulp" type="radio"  value="nee">
+                    </label>
+                <%}}else {%>
+                    <label> ja
+                        <input name="hulp" type="radio" value="ja">
+                    </label>
+                    <label> nee
+                        <input name="hulp" type="radio" value="nee">
+                    </label>
+                <%}%>
+            </div>
     </fieldset>
-    <input type="submit" value="Opslaan">
+    <input class="opslaan" type="submit" value="Opslaan">
 </form>
 <form action="/enquete/stap-dree">
-    <input type="submit" value="Versturen">
+    <input class="versturen" type="submit" value="Versturen">
 </form>
 </section>
 <%- include ./partials/footer.ejs %>
