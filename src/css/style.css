@@ -8,6 +8,31 @@ header h1 {
     margin: auto 0;
 }
 
+progress {
+    -webkit-appearance: none;
+    display: block;
+    width: 150px;
+    height: 1em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #ccc;
+    border-radius: 20px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #01cd82;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.progress-stap-dree[value]::-webkit-progress-value {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 header {
     display: flex;
     padding-left: 1em;
@@ -24,11 +49,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:focus {
-    background-color: #807b03;
+    background-color: #cac409;
 }
 
 input[type="submit"]:hover {
-    background-color: #807b03;
+    background-color: #cac409;
 }
 
 main {
