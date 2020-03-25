@@ -65,14 +65,26 @@ router.get("/stap-twee", function(req, res) {
   }
 });
 ```
-<img width="1280" alt="Screenshot 2020-03-21 at 20 21 18" src="https://user-images.githubusercontent.com/45425087/77234837-ac296980-6bb1-11ea-842e-01e5aa7afb35.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 11 21 49" src="https://user-images.githubusercontent.com/45425087/77526724-542d8400-6e8b-11ea-879b-9831d92344a1.png">
 
-<img width="1280" alt="Screenshot 2020-03-21 at 20 21 33" src="https://user-images.githubusercontent.com/45425087/77234836-a764b580-6bb1-11ea-9896-f0a1e7f6b0f1.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 11 22 05" src="https://user-images.githubusercontent.com/45425087/77526736-5859a180-6e8b-11ea-80e4-77363f487c8e.png">
 
-<img width="1280" alt="Screenshot 2020-03-21 at 20 21 51" src="https://user-images.githubusercontent.com/45425087/77234838-adf32d00-6bb1-11ea-89fd-6eb953cfe9ba.png">
-
+<img width="1280" alt="Screenshot 2020-03-25 at 11 22 13" src="https://user-images.githubusercontent.com/45425087/77526740-5b549200-6e8b-11ea-95d0-a10a9c574696.png">
 
 ## Usable
+
+IE11 ondersteund linar-gradiant niet om het probleem op te lossen heb ik @supports toegevoegd
+```
+section {
+    background: #00b2f1 no-repeat;
+}
+
+@supports (background: linear-gradient(#01cd82, #00b2f1)) {
+    section {
+        background: linear-gradient(#00b2f1, #01cd82) no-repeat;
+    }
+}
+```
 
 ## Pleasurable
 
