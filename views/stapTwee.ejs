@@ -2,6 +2,8 @@
 <progress class="stappen" value="2" max="3">2/3</progress>
 <section>
 <h2>Het enquete</h2>
+<div class="container">
+</div>
 <form class="form-stap-twee" action="/enquete/stap-twee" method="GET">
     <label >
     <input type="hidden" name="user" value="<%= user%>">
@@ -9,16 +11,12 @@
     <fieldset>
         <legend>Vraag 1</legend>
         <label for="goed">Wat vond je goed gegaan bij deze minor?</label> 
-            <textarea rows="4" cols="35" id="goed" name="goed" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>">
-                <% if(data[data.length-1]) {%> <%= data[data.length-1].goed %> <%}%>
-            </textarea>
+        <textarea rows="4" cols="35" id="goed" name="goed" wrap="hard" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%>"><% if(data[data.length-1]) {%><%= data[data.length-1].goed %><%}%></textarea>
     </fieldset>
     <fieldset>
         <legend>Vraag 2</legend>
         <label for="slecht">Wat vond je minder goed aan deze minor?</label>
-            <textarea rows="4" cols="35" id="slecht" name="slecht" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>">
-                <% if(data[data.length-1]) {%> <%= data[data.length-1].slecht %> <%}%>
-            </textarea>
+        <textarea rows="4" cols="35" id="slecht" name="slecht" wrap="hard" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%>"><% if(data[data.length-1]) {%><%= data[data.length-1].slecht %><%}%></textarea>
     </fieldset>
     <fieldset>
         <legend>Vraag 3</legend>
