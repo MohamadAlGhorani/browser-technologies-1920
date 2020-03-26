@@ -65,13 +65,21 @@ router.get("/stap-twee", function(req, res) {
   }
 });
 ```
-<img width="1280" alt="Screenshot 2020-03-25 at 11 21 49" src="https://user-images.githubusercontent.com/45425087/77526724-542d8400-6e8b-11ea-879b-9831d92344a1.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 26 47" src="https://user-images.githubusercontent.com/45425087/77547223-2fe29f00-6ead-11ea-84aa-ed8f7dbd901c.png">
 
-<img width="1280" alt="Screenshot 2020-03-25 at 11 22 05" src="https://user-images.githubusercontent.com/45425087/77526736-5859a180-6e8b-11ea-80e4-77363f487c8e.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 27 00" src="https://user-images.githubusercontent.com/45425087/77547239-36711680-6ead-11ea-866d-8b312b39509a.png">
 
-<img width="1280" alt="Screenshot 2020-03-25 at 11 22 13" src="https://user-images.githubusercontent.com/45425087/77526740-5b549200-6e8b-11ea-95d0-a10a9c574696.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 27 10" src="https://user-images.githubusercontent.com/45425087/77547381-68827880-6ead-11ea-9662-905d813ae08a.png">
+
 
 ## Usable
+
+Het usable laagje is het laagje waar het web-site opgemaakt wordt, kleurtjes en layout krijgt. Zodat het web-site bereikbaar wordt Daarnaast zorgt deze laagje op gebruik vreindelijkheid.
+<img width="1280" alt="Screenshot 2020-03-25 at 15 30 12" src="https://user-images.githubusercontent.com/45425087/77547616-b7c8a900-6ead-11ea-8de6-f9c8c3b22652.png">
+<img width="617" alt="Screenshot 2020-03-25 at 15 31 14" src="https://user-images.githubusercontent.com/45425087/77547627-bbf4c680-6ead-11ea-9e54-689fcb5292b8.png">
+<img width="1280" alt="Screenshot 2020-03-25 at 15 31 23" src="https://user-images.githubusercontent.com/45425087/77547631-bdbe8a00-6ead-11ea-8b30-bae9c9a70636.png">
+
+### Feature detection
 
 IE11 ondersteund linar-gradiant niet om het probleem op te lossen heb ik @supports toegevoegd
 ```
