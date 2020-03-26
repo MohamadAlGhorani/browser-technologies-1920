@@ -61,7 +61,9 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
 
 for (let i = 0; i < fieldsetsArray.length; i++) {
     filedsetElemnts[i].addEventListener("change", function () {
-        steps[i].nextElementSibling.classList.add("active")
+        if (steps[i].nextElementSibling) {
+            steps[i].nextElementSibling.classList.add("active")
+        }
         filedsetElemnts[i].nextElementSibling.style.opacity = "1";
         filedsetElemnts[i].nextElementSibling.style.height = "auto";
     })
