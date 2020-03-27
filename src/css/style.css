@@ -42,6 +42,7 @@
 }
 
 .progressbar li {
+    color: gray;
     list-style-type: none;
     position: relative;
     text-align: center;
@@ -77,6 +78,10 @@
 }
 
 .progressbar li.active {
+    color: #000;
+}
+
+.progressbar li.done {
     color: #e9e20c;
 }
 
@@ -110,6 +115,13 @@
 }
 
 .progressbar li.active::before {
+    border-color: #ccc;
+    background-color: #00b2f1;
+    position: relative;
+    z-index: 99;
+}
+
+.progressbar li.done::before {
     border-color: #e9e20c;
     background-color: #01cd82;
     position: relative;
@@ -117,6 +129,10 @@
 }
 
 .progressbar li.active+li::after {
+    background-color: #ccc;
+}
+
+.progressbar li.done+li::after {
     background-color: #e9e20c;
 }
 
