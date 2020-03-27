@@ -68,5 +68,8 @@
     <input class="opslaan" type="submit" value="Opslaan">
     <button class="versturen" type="submit" formaction="/enquete/stap-dree">versturen</button>
 </form>
+<% if (!user) {%>
+    <p class="feedback">Je antwoorden zijn opgeslagen</p>  
+<%}%>
 </section>
 <%- include ./partials/footer.ejs %>

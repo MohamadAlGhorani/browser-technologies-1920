@@ -6,6 +6,34 @@
     widows: 100%;
 }
 
+.feedback {
+    margin-top: 0;
+    margin-bottom: 1em;
+    margin-left: 0;
+    border: 1px solid #e9e20c;
+    border-radius: 10px;
+    width: 218px;
+    line-height: 2em;
+    padding: .5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    animation-name: hide;
+    animation-duration: 3s;
+    opacity: 1;
+}
+
+
+@keyframes hide {
+    100% {
+        margin-top: 0;
+        margin-bottom: 1em;
+        opacity: 1;
+        height: auto;
+        margin-left: 0;
+        padding: .5em;
+    }
+}
+
 .progressbar {
     padding-left: 0;
     counter-reset: step;
@@ -17,6 +45,7 @@
     list-style-type: none;
     position: relative;
     text-align: center;
+    transition: all .5s;
 }
 
 .progressbar li::before {
@@ -37,10 +66,10 @@
     content: " ";
     position: absolute;
     top: 12.5px;
-    width: 100%;
+    width: 115%;
     height: 2px;
     background-color: #ccc;
-    left: -75%;
+    left: -89%;
 }
 
 .progressbar li:first-child::after {
@@ -51,9 +80,40 @@
     color: #e9e20c;
 }
 
+@supports (animation: normal) {
+    .progressbar li.active::before {
+        animation-name: scale;
+        animation-duration: 1s;
+    }
+
+    .feedback {
+        margin: 0;
+        height: 0;
+        transition: all 1s;
+        border: 1px solid #e9e20c;
+        border-radius: 10px;
+        width: 218px;
+        line-height: 2em;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        animation-name: hide;
+        animation-duration: 3s;
+        opacity: 0;
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1.2);
+    }
+}
+
 .progressbar li.active::before {
     border-color: #e9e20c;
     background-color: #01cd82;
+    position: relative;
+    z-index: 99;
 }
 
 .progressbar li.active+li::after {
@@ -179,6 +239,8 @@ section form {
 .form-stap-een input[type="text"] {
     width: 100%;
     margin-top: 0.5em;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 .form-stap-een input[type="submit"] {
@@ -190,6 +252,8 @@ textarea {
     display: block;
     width: 99%;
     margin-top: .5em;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 fieldset {
@@ -203,6 +267,8 @@ fieldset {
 .form-stap-twee input[type="text"] {
     width: 100%;
     margin-top: .5em;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 .form-stap-twee input[type="number"] {
@@ -212,6 +278,7 @@ fieldset {
     height: 4em;
     padding-left: 2em;
     position: relative;
+    border-radius: 5px;
 }
 
 .form-stap-twee input[type="number"]::-webkit-outer-spin-button,
