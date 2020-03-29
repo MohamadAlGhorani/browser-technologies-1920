@@ -63,9 +63,11 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
                 }
             }) != "") {
             submitBtn.classList.remove("unactive-btn");
+            steps[i].classList.add("done")
+        } else if (filedsetElemnts[i].elements[0].value && filedsetElemnts[i].elements[0].value != 'ja' && filedsetElemnts[i].elements[0].value != 'nee') {
+            steps[i].classList.add("done")
         } else {
             if (steps[i].nextElementSibling) {
-                steps[i].nextElementSibling.classList.remove("active")
                 steps[i].classList.remove("done")
             }
             submitBtn.classList.add("unactive-btn");
@@ -74,7 +76,7 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
 }
 
 for (let i = 0; i < fieldsetsArray.length; i++) {
-    if (filedsetElemnts[i].elements[0].value && Array.from(filedsetElemnts[4].elements).filter(element => {
+    if (filedsetElemnts[i].elements[0].value != "" && Array.from(filedsetElemnts[4].elements).filter(element => {
             if (element.checked == true) {
                 return true
             } else {
@@ -90,6 +92,7 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
         filedsetElemnts[i].classList.add("show")
         filedsetElemnts[i].classList.remove("hide")
         submitBtn.classList.remove("unactive-btn");
+        console.log("laaaa")
     } else if (filedsetElemnts[i].elements[0].value && filedsetElemnts[i].elements[0].value != 'ja' && filedsetElemnts[i].elements[0].value != 'nee') {
         if (steps[i].nextElementSibling) {
             steps[i].classList.add("done")
@@ -99,10 +102,11 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
         filedsetElemnts[i].nextElementSibling.classList.remove("hide")
         filedsetElemnts[i].classList.add("show")
         filedsetElemnts[i].classList.remove("hide")
+        console.log("mmmmm")
     } else {
+        console.log("hiii")
         submitBtn.classList.add("unactive-btn");
         if (steps[i].nextElementSibling) {
-            steps[i].nextElementSibling.classList.remove("active")
             steps[i].classList.remove("done")
         }
     }
