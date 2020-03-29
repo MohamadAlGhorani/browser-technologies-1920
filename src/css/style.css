@@ -61,6 +61,8 @@
     margin: 0 auto 5px auto;
     border-radius: 50%;
     background-color: white;
+    position: relative;
+    z-index: 99;
 }
 
 .progressbar li::after {
@@ -257,6 +259,7 @@ section form {
     margin-top: 0.5em;
     border-radius: 5px;
     padding-left: 5px;
+    height: 2em;
 }
 
 .form-stap-een input[type="submit"] {
@@ -285,6 +288,7 @@ fieldset {
     margin-top: .5em;
     border-radius: 5px;
     padding-left: 5px;
+    height: 2em;
 }
 
 .form-stap-twee input[type="number"] {
@@ -328,6 +332,8 @@ fieldset {
 }
 
 .versturen {
+    opacity: 1;
+    pointer-events: all;
     position: absolute;
     bottom: 1em;
     right: 2em;
@@ -357,6 +363,41 @@ legend {
     margin-bottom: 0.5em;
 }
 
+.li-six {
+    display: none;
+}
+
+.unactive-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show {
+    height: auto;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.show input,
+.show textarea,
+.show label,
+.show legend {
+    pointer-events: all;
+}
+
+.hide {
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hide input,
+.hide textarea,
+.hide label,
+.hide legend {
+    pointer-events: none;
+}
+
 @media(max-width:768px) {
     section {
         padding: 1em;
@@ -382,5 +423,30 @@ legend {
     .versturen {
         bottom: 1em;
         right: 1em;
+    }
+
+    .progressbar li::after {
+        width: 115%;
+        left: -65%;
+    }
+
+    textarea {
+        width: 97%;
+    }
+
+    .form-stap-twee input[type=text] {
+        width: 97%;
+    }
+
+    .form-stap-twee input[type=number] {
+        margin-bottom: 1em;
+    }
+
+    .form-stap-twee fieldset:last-of-type {
+        margin-bottom: 1em;
+    }
+
+    .q-container label {
+        margin-right: 1em;
     }
 }

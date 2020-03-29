@@ -18,7 +18,7 @@ li4.textContent = "Vraag 4"
 let li5 = document.createElement("li")
 li5.textContent = "Vraag 5"
 let li6 = document.createElement("li")
-li6.style.display = "none"
+li6.classList.add("li-six")
 
 ul.appendChild(li1)
 ul.appendChild(li2)
@@ -35,21 +35,42 @@ let steps = document.querySelectorAll(".container ul li")
 
 
 if (submitBtn) {
-    submitBtn.style.opacity = "0";
+    submitBtn.classList.add("unactive-btn");
 }
 
-fieldsetsArray.map(async function (item) {
-    item.style.opacity = "0"
-    item.style.height = "0px"
+fieldsetsArray.map(function (item) {
+    item.classList.add("hide")
+    item.classList.remove("show")
 })
-
-function hideElements(item) {
-    item.style.opacity = "0"
-    item.style.height = "0px"
-}
 if (fieldsetsArray[0]) {
-    fieldsetsArray[0].style.opacity = "1"
-    fieldsetsArray[0].style.height = "auto"
+    fieldsetsArray[0].classList.add("show")
+    fieldsetsArray[0].classList.remove("hide")
+}
+
+for (let i = 0; i < fieldsetsArray.length; i++) {
+    filedsetElemnts[i].addEventListener("change", function () {
+        if (steps[i].nextElementSibling) {
+            steps[i].nextElementSibling.classList.add("active")
+            steps[i].classList.add("done")
+        }
+        filedsetElemnts[i].nextElementSibling.classList.add("show")
+        filedsetElemnts[i].nextElementSibling.classList.remove("hide")
+        if (filedsetElemnts[i].elements[0].value && Array.from(filedsetElemnts[4].elements).filter(element => {
+                if (element.checked == true) {
+                    return true
+                } else {
+                    return false
+                }
+            }) != "") {
+            submitBtn.classList.remove("unactive-btn");
+        } else {
+            if (steps[i].nextElementSibling) {
+                steps[i].nextElementSibling.classList.remove("active")
+                steps[i].classList.remove("done")
+            }
+            submitBtn.classList.add("unactive-btn");
+        }
+    })
 }
 
 for (let i = 0; i < fieldsetsArray.length; i++) {
@@ -64,35 +85,25 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
             steps[i].classList.add("done")
             steps[i].nextElementSibling.classList.add("active")
         }
-        filedsetElemnts[i].nextElementSibling.style.opacity = "1";
-        filedsetElemnts[i].nextElementSibling.style.height = "auto";
+        filedsetElemnts[i].nextElementSibling.classList.add("show")
+        filedsetElemnts[i].nextElementSibling.classList.remove("hide")
+        filedsetElemnts[i].classList.add("show")
+        filedsetElemnts[i].classList.remove("hide")
+        submitBtn.classList.remove("unactive-btn");
     } else if (filedsetElemnts[i].elements[0].value && filedsetElemnts[i].elements[0].value != 'ja' && filedsetElemnts[i].elements[0].value != 'nee') {
         if (steps[i].nextElementSibling) {
             steps[i].classList.add("done")
             steps[i].nextElementSibling.classList.add("active")
         }
-        filedsetElemnts[i].nextElementSibling.style.opacity = "1";
-        filedsetElemnts[i].nextElementSibling.style.height = "auto";
-    }
-}
-
-for (let i = 0; i < fieldsetsArray.length; i++) {
-    filedsetElemnts[i].addEventListener("change", function () {
+        filedsetElemnts[i].nextElementSibling.classList.add("show")
+        filedsetElemnts[i].nextElementSibling.classList.remove("hide")
+        filedsetElemnts[i].classList.add("show")
+        filedsetElemnts[i].classList.remove("hide")
+    } else {
+        submitBtn.classList.add("unactive-btn");
         if (steps[i].nextElementSibling) {
-            steps[i].nextElementSibling.classList.add("active")
-            steps[i].classList.add("done")
+            steps[i].nextElementSibling.classList.remove("active")
+            steps[i].classList.remove("done")
         }
-        filedsetElemnts[i].nextElementSibling.style.opacity = "1";
-        filedsetElemnts[i].nextElementSibling.style.height = "auto";
-    })
-}
-if (fieldsetsArray[4]) {
-    filedsetElemnts[4].addEventListener("change", function () {
-        submitBtn.style.opacity = "1";
-    })
-}
-if (fieldsetsArray[4]) {
-    if (filedsetElemnts[4].elements[0].checked || filedsetElemnts[4].elements[1].checked) {
-        submitBtn.style.opacity = "1";
     }
 }
