@@ -116,7 +116,7 @@ In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met
 
 ## Testen op de 8 features
 
-## Ik heb de website getest op 4 browsers getest op mijn eigen laptop macbook 2015 macOS Catalina 10.15
+### Ik heb de website getest op 4 browsers getest op mijn eigen laptop macbook 2015 macOS Catalina 10.15
 
 1- ```Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36``` dit is chrome browser op de macbook 2015 macOS Catalina 10.15 en de web-site werkt helemaal prima daar.
 
@@ -126,9 +126,9 @@ In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met
 
 4- 
 
-## Screenreader ChromeVox:
+### Screenreader ChromeVox:
 
-## Test op 8 features
+### Test op 8 features
 
 1- Afbeeldingen uitzetten. 
 Ik heb de afbeeldingen uitgezet en de website doet het prima de layout is prima.
