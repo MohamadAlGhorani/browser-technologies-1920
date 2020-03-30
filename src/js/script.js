@@ -49,10 +49,6 @@ if (fieldsetsArray[0]) {
 
 for (let i = 0; i < fieldsetsArray.length; i++) {
     filedsetElemnts[i].addEventListener("input", function () {
-        if (steps[i].nextElementSibling) {
-            steps[i].nextElementSibling.classList.add("active")
-            steps[i].classList.add("done")
-        }
         filedsetElemnts[i].nextElementSibling.classList.add("show")
         filedsetElemnts[i].nextElementSibling.classList.remove("hide")
         if (filedsetElemnts[i].elements[0].value && Array.from(filedsetElemnts[4].elements).filter(element => {
@@ -63,6 +59,25 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
                 }
             }) != "") {
             submitBtn.classList.remove("unactive-btn");
+        } else {
+            submitBtn.classList.add("unactive-btn");
+        }
+    })
+}
+
+for (let i = 0; i < fieldsetsArray.length; i++) {
+    filedsetElemnts[i].addEventListener("change", function () {
+        if (steps[i].nextElementSibling) {
+            steps[i].nextElementSibling.classList.add("active")
+            steps[i].classList.add("done")
+        }
+        if (filedsetElemnts[i].elements[0].value && Array.from(filedsetElemnts[4].elements).filter(element => {
+                if (element.checked == true) {
+                    return true
+                } else {
+                    return false
+                }
+            }) != "") {
             steps[i].classList.add("done")
         } else if (filedsetElemnts[i].elements[0].value && filedsetElemnts[i].elements[0].value != 'ja' && filedsetElemnts[i].elements[0].value != 'nee') {
             steps[i].classList.add("done")
@@ -70,7 +85,6 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
             if (steps[i].nextElementSibling) {
                 steps[i].classList.remove("done")
             }
-            submitBtn.classList.add("unactive-btn");
         }
     })
 }
