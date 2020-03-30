@@ -114,7 +114,7 @@ In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met
 <img width="1280" alt="Screenshot 2020-03-30 at 10 28 25" src="https://user-images.githubusercontent.com/45425087/77891514-5e77c580-7271-11ea-8065-bda5e0584502.png">
 <img width="1280" alt="Screenshot 2020-03-30 at 10 28 57" src="https://user-images.githubusercontent.com/45425087/77891533-620b4c80-7271-11ea-9dbe-c43236aa99e8.png">
 
-## Testen op de 8 features
+## Testen
 
 ### Ik heb de website getest op 4 browsers getest op mijn eigen laptop macbook 2015 macOS Catalina 10.15
 
@@ -124,13 +124,19 @@ In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met
 
 3- ```Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15``` dit is safari op macbook 2015 macOS Catalina 10.15 en de web-site werkt daar prima.
 
-4- 
+### browserstack
+IE11 op windows 7
+1- Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Daar werkt alles prima behalve de gradiant en daarom had ik de gradiant in een @support neergezet.
+Mijn @support werder in deze browser niet ondersteund en ik krijg de fall back te zien dus het werkt prima.
 
 ### Screenreader ChromeVox:
+Ik heb een test gedaan op ChromeVox en ik kon perfect alles doen zonder te kijken naar de scherm de tap werkt perfect.
 
 ### Test op 8 features
 
 1- Afbeeldingen uitzetten. 
+in de settings van de browser kan ik de afbeedlingen uitzetten.
 Ik heb de afbeeldingen uitgezet en de website doet het prima de layout is prima.
 Alleen de logo wordt niet zichtbaar maar dat is niet erg omdat ik ook een title heb naast de logo staan.
 
@@ -139,19 +145,23 @@ ik heb uBlock origin chrome extension gebruikt om te testen.
 Mijn website werkt prima omdat ik system fonts gebruik.
 
 3- Kleur uitzetten & kleurblindheid instellen
+ik heb een test gedaan op deze website https://www.toptal.com/designers/colorfilter/
 Het gaat helemaal prima met kleuren ik heb alle mogelijkheden van kleur blind gebruikt en het is prima.
-Contrast is goed de tekst is zwart op een bluowe achtergrond of een wite achtergrond.
+Contrast is goed de tekst is zwart op een bluwe achtergrond of een wite achtergrond.
 
 4- Muis/trackpad werkt niet 
 Als je muis of je trackpad niet werken kan je de tap gebruiken om te navigeren.
 
 5- Breedband internet uitzetten 
+in de Devtools kan je de network traag maken door slow 3G te kiezen inplaats van online.
 De website werkt prima op trage internet slow 3G de gebruiker krijgt altijd de form te zien omdat het html is.
 
 6- Javascript uitzetten
+in de settings van de browser kan ik de js uitzetten
 Als ik de javascript uitzet werkt het prima en de gebruiker kan nog steeds alles doen.
 
 7- Cookies & localStorage uitzetten 
+in de settings van de browser kan ik de cookies en localStorage uitzetten.
 Als ik Cookies en localStorage uitzet werkt de site prima omdat ik geen gebruik maak van localStorage.
 
 ## Installation
