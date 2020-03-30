@@ -6,15 +6,20 @@
     widows: 100%;
 }
 
+.form-stap-twee {
+    margin-bottom: 3em;
+}
+
 .feedback {
     margin-top: 0;
     margin-bottom: 1em;
     margin-left: 0;
     border: 1px solid #e9e20c;
     border-radius: 10px;
-    width: 218px;
+    text-align: center;
+    width: 250px;
     line-height: 2em;
-    padding: .5em;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     animation-name: hide;
@@ -96,12 +101,13 @@
     .feedback {
         margin: 0;
         height: 0;
+        text-align: center;
         transition: all 1s;
         border: 1px solid #e9e20c;
         border-radius: 10px;
-        width: 218px;
+        width: 250px;
         line-height: 2em;
-        padding: 0;
+        padding: 10px;
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
         animation-name: hide;
@@ -332,7 +338,7 @@ fieldset {
 }
 
 .versturen {
-    opacity: 1;
+    display: block;
     pointer-events: all;
     position: absolute;
     bottom: 1em;
@@ -368,33 +374,16 @@ legend {
 }
 
 .unactive-btn {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 .show {
-    height: auto;
-    opacity: 1;
-    pointer-events: all;
-}
-
-.show input,
-.show textarea,
-.show label,
-.show legend {
+    display: block;
     pointer-events: all;
 }
 
 .hide {
-    height: 0;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.hide input,
-.hide textarea,
-.hide label,
-.hide legend {
+    display: none;
     pointer-events: none;
 }
 

@@ -20,19 +20,17 @@
     </fieldset>
     <fieldset>
         <legend>Vraag 3</legend>
-        <label for="">Welke vak vind je het leukst? 
-            <input name="leukst" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].leukst %><%}%>">
-        </label>
+        <label for="leuk">Welke vak vind je het leukst?</label>
+        <input id="leuk" name="leukst" type="text" value="<% if(data[data.length-1]) {%><%= data[data.length-1].leukst %><%}%>">
     </fieldset>
     <fieldset>
         <legend>Vraag 4</legend>
-        <label for="">Wat voor score geef je deze minor? 
-            <input name="beoordeling" type="number" min="1" max="10" value="<% if(data[data.length-1]) {%><%= data[data.length-1].beoordeling %><%}%>">
-        </label>
+        <label for="score">Wat voor score geef je deze minor?</label>
+        <input id="score" name="beoordeling" type="number" min="1" max="10" value="<% if(data[data.length-1]) {%><%= data[data.length-1].beoordeling %><%}%>">
     </fieldset>
     <fieldset>
         <legend>Vraag 5</legend>
-        <label>Heb je voldoende hulp gekregen?</label>
+        <label for="hulp">Heb je voldoende hulp gekregen?</label>
             <div class="q-container">
                 <% if(data[data.length-1]) { if(data[data.length-1].hulp == "ja") {%>
                 <label> ja

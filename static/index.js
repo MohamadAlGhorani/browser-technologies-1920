@@ -48,7 +48,7 @@ if (fieldsetsArray[0]) {
 }
 
 for (let i = 0; i < fieldsetsArray.length; i++) {
-    filedsetElemnts[i].addEventListener("change", function () {
+    filedsetElemnts[i].addEventListener("input", function () {
         if (steps[i].nextElementSibling) {
             steps[i].nextElementSibling.classList.add("active")
             steps[i].classList.add("done")
@@ -92,7 +92,6 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
         filedsetElemnts[i].classList.add("show")
         filedsetElemnts[i].classList.remove("hide")
         submitBtn.classList.remove("unactive-btn");
-        console.log("laaaa")
     } else if (filedsetElemnts[i].elements[0].value && filedsetElemnts[i].elements[0].value != 'ja' && filedsetElemnts[i].elements[0].value != 'nee') {
         if (steps[i].nextElementSibling) {
             steps[i].classList.add("done")
@@ -102,9 +101,7 @@ for (let i = 0; i < fieldsetsArray.length; i++) {
         filedsetElemnts[i].nextElementSibling.classList.remove("hide")
         filedsetElemnts[i].classList.add("show")
         filedsetElemnts[i].classList.remove("hide")
-        console.log("mmmmm")
     } else {
-        console.log("hiii")
         submitBtn.classList.add("unactive-btn");
         if (steps[i].nextElementSibling) {
             steps[i].classList.remove("done")
