@@ -114,6 +114,46 @@ In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met
 <img width="1280" alt="Screenshot 2020-03-30 at 10 28 25" src="https://user-images.githubusercontent.com/45425087/77891514-5e77c580-7271-11ea-8065-bda5e0584502.png">
 <img width="1280" alt="Screenshot 2020-03-30 at 10 28 57" src="https://user-images.githubusercontent.com/45425087/77891533-620b4c80-7271-11ea-9dbe-c43236aa99e8.png">
 
+## Testen op de 8 features
+
+## Ik heb de website getest op 4 browsers getest op mijn eigen laptop macbook 2015 macOS Catalina 10.15
+
+1- ```Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36``` dit is chrome browser op de macbook 2015 macOS Catalina 10.15 en de web-site werkt helemaal prima daar.
+
+2- ```Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:73.0) Gecko/20100101 Firefox/73.0``` dit is firefox op macbook 2015 macOS Catalina 10.15 en de web-site doet het prima erop.
+
+3- ```Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15``` dit is safari op macbook 2015 macOS Catalina 10.15 en de web-site werkt daar prima.
+
+4- 
+
+## Screenreader ChromeVox:
+
+## Test op 8 features
+
+1- Afbeeldingen uitzetten. 
+Ik heb de afbeeldingen uitgezet en de website doet het prima de layout is prima.
+Alleen de logo wordt niet zichtbaar maar dat is niet erg omdat ik ook een title heb naast de logo staan.
+
+2- Custom fonts uitzetten
+ik heb uBlock origin chrome extension gebruikt om te testen.
+Mijn website werkt prima omdat ik system fonts gebruik.
+
+3- Kleur uitzetten & kleurblindheid instellen
+Het gaat helemaal prima met kleuren ik heb alle mogelijkheden van kleur blind gebruikt en het is prima.
+Contrast is goed de tekst is zwart op een bluowe achtergrond of een wite achtergrond.
+
+4- Muis/trackpad werkt niet 
+Als je muis of je trackpad niet werken kan je de tap gebruiken om te navigeren.
+
+5- Breedband internet uitzetten 
+De website werkt prima op trage internet slow 3G de gebruiker krijgt altijd de form te zien omdat het html is.
+
+6- Javascript uitzetten
+Als ik de javascript uitzet werkt het prima en de gebruiker kan nog steeds alles doen.
+
+7- Cookies & localStorage uitzetten 
+Als ik Cookies en localStorage uitzet werkt de site prima omdat ik geen gebruik maak van localStorage.
+
 ## Installation
 - Download [Node.js](https://nodejs.org/en/) if you don't have it. 
 - Clone this repository.
