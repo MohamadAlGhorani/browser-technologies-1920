@@ -106,7 +106,7 @@ section {
 
 ## Pleasurable
 
-Voor mijn pleasurable laag heb ik bedacht om van mijn form prograssive discluser te maken. Dat de gebruiker stap per stap het enquete kan invullen en wanneer hij/zij alle vragen heeft beantwoordt kan hij/zij het formulier versturen. omdat de knop versturen wordt zictbaar pas alle vragen zijn beantwoordt.
+Voor mijn pleasurable laag heb ik bedacht om van mijn form progressive disclosure  te maken. Dat de gebruiker stap per stap het enquete kan invullen en wanneer hij/zij alle vragen heeft beantwoordt kan hij/zij het formulier versturen. omdat de knop versturen wordt zictbaar pas alle vragen zijn beantwoordt.
 In deze laag wordt alles door Javascript toegevoegd en ik heb ervoor gezorgd met keyfream animatie in css en js duidelijk feedback aan de gebruiker te geven door in welke vraag de gebruiker zich zelf bevindt en en welke vragen nog niet beantowoord zijn. Het enquete kan prima ingevuld worden zonder js zoals je gezien hebt bij het Usable laag.
 
 <img width="1280" alt="Screenshot 2020-03-30 at 10 28 25" src="https://user-images.githubusercontent.com/45425087/77891514-5e77c580-7271-11ea-8065-bda5e0584502.png">
