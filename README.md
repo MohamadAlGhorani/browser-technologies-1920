@@ -85,6 +85,7 @@ Het usable laagje is het laagje waar het web-site opgemaakt wordt, kleurtjes en 
 <img width="1280" alt="Screenshot 2020-03-30 at 10 15 04" src="https://user-images.githubusercontent.com/45425087/77890419-b6153180-726f-11ea-81c1-f3b3613a78d0.png">
 
 ### Feature detection
+CSS
 
 IE11 ondersteund linar-gradiant niet om het probleem op te lossen heb ik @supports toegevoegd
 ```
@@ -104,6 +105,17 @@ section {
         animation-name: scale;
         animation-duration: 1s;
     }
+```
+
+JS 
+Ik check voor oude browser of de fieldsetArray[0] bestaat en als het bestaat krijgt de gebruiker de meeste enhanced versie anders krijgt hij de css laag omdat sommige brwsers geen querySelecor ondersteunen.
+```
+let filedsetElemnts = document.querySelectorAll('.form-stap-twee fieldset')
+let fieldsetsArray = Array.from(filedsetElemnts);
+
+if (fieldsetsArray[0]){
+}
+
 ```
 
 ## Pleasurable
